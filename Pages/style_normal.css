@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css?family=Arial');
+* { /*All page*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: Arial;
+}
+
+html{
+	height: 100%;
+}
+header{
+        background-color: rgba(255, 255, 255, 0.7);    
+}
+body{
+    /*inside the body tag*/
+	display: flex; /*Put all the block in the same line*/
+	flex-direction: column;
+	min-height: 100%;
+	background-image: url("background_template.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+#title{
+	font-size: 54px;
+	text-align: center;
+}
+
+#chat-box{
+	margin-top: 80px;
+	border: solid 1px black;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#chat{
+	resize: none;
+	padding: 5px;
+	margin-bottom: -5px;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	outline: 0;
+}
+
+#chat-bar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+}
+
+#text-message{
+	width: 400px;
+	border: solid 1px black;
+	margin-top: 8.5px;
+	margin-bottom: 8.5px;
+	border-right: none;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	outline: 0;
+}
+
+#button-message{
+	border: solid 1px black;
+	margin-bottom: 8.5px;
+	margin-top: 8.5px;
+	width: 60px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: rgb(168, 46, 51);
+	color: white;
+}
+
+/*Login - Sign in*/
+#lg{
+	color: black;
+	text-decoration: none;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+#lg:hover{
+	text-decoration: underline;
+}
+
+#si{
+	color: black;
+	text-decoration: none;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+#si:hover{
+	text-decoration: underline;
+}
+
+.logsign{
+	text-align: right; /*Put the text on the right of the screen*/
+}
+
+/* ------------------------------------------------------------------------*/
+
+/*Post - Home Page (Jokes post)*/
+.title_joke{
+	background-color: black;
+	color: white;
+	border-bottom: 1px solid rgb(168, 46, 51);
+}
+
+.author_joke{
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+.joke{
+        color: white;
+	background-color: rgb(168, 46, 51);
+	border-bottom: 1px solid black;
+}
+
+.last-row{
+	background-color: white;
+}
+
+.joke-box{
+	display: flex;
+	gap: 20px;
+}
+
+.joke-box table{
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 500px;
+}
+
+#jokes-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/*container - navigation bar*/
+#drop-menu {
+	margin: 0; /*distance from external part*/
+	padding: 0; /*distance from internal part*/
+	width: 100%; /*cover all the width of the page*/
+	text-align: center;
+}
+
+/*menu*/
+
+#menu {
+	list-style: none; /*no type of list style*/
+	background-color: #222;
+}
+
+#menu li { /*Modify the dimension of all the box*/
+	display: inline-block; /*Put all the block in the same line*/ 
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#menu li:hover{
+	padding-left: 20px;
+	padding-right: 20px;
+	background: rgb(168, 46, 51);
+}
+
+#menu a {
+	display: block; 
+	width: 100px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration:none; /*If I don't use this command
+							it will appear automatically the underline*/
+}
+
+#submenu {
+	display: inline-block;
+	list-style: none;
+	opacity: 0;
+	visibility: hidden; /*hidden the option about POST*/
+	position: absolute;
+	background: #444;
+}
+
+#menu li:hover ul{ /*If the user goes on the "POST" button*/
+	opacity: 1;
+	visibility: visible; /*show the option about POST*/
+}
+
+/*Three option under POST*/
+
+#submenu li {
+	position: relative;
+	display: block;
+}
+
+#submenu a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	white-space: nowrap;
+	text-transform: none;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/*Bottom page*/
+footer{
+	text-align: left;
+	background-color: #222;
+	color: white;
+	padding: 1%;
+	margin-top: auto;	
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/*Competition*/
+#form-competition{
+	background-color: rgba(255, 255, 255, 0.7);
+	text-align: center;
+	font-weight: bold;
+	font-size: 36px;
+	margin-top: 3%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 6px;
+	font-size: 150%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	box-shadow: 3px 3px 10px black;
+}
+
+.mini-title{
+	font-size: 40px;
+}
+
+#write-title{
+	height: 35px;
+	width: 350px;
+	padding-left: 5px;
+	outline: 0;
+}
+
+#write-joke{
+	resize: none;
+	padding: 5px;
+	outline: 0;
+}
+
+#message{
+	font-weight: normal;
+	font-size: 15px;
+}
+
+#submit{
+	border-style: hidden;
+	border-radius: 4px;
+	width: 100%;
+	height: 3em;
+	background-color: rgb(168, 46, 51);
+	color: whitesmoke;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#acc-ref{
+	border-style: hidden;
+	width: 20%;
+	height: 2em;
+	background-color: rgb(0, 0, 0);
+	color: whitesmoke;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#spaceb{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*Custom scrollbar*/
+::-webkit-scrollbar{
+    width: 1vw;
+    border-radius: 1vw;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(37, 36, 36);
+    height: 1vw;
+    width: 2vw;
+    border: .2vw solid rgb(172, 172, 172);
+    border-radius: 1vw;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(87, 82, 82);
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(172, 172, 172);
+}
+
+/*Star rating system*/
+
+.star_rating_0,
+.star_rating_1,
+.star_rating_2,
+.star_rating_3,
+.star_rating_4,
+.star_rating_5,
+.star_rating_6,
+.star_rating_7,
+.star_rating_8,
+.star_rating_9,
+.star_rating_10{
+	display: flex;
+	justify-content: center; /*place items on the center of the element (horizontal axis)*/
+	transform: rotateY(180deg); /*rotate the entire star rating on the y-axis by 180 degrees (i've done this property because the stars should light up from the left to the right and not vice-versa*/
+}
+
+.star_rating_0 input,
+.star_rating_1 input,
+.star_rating_2 input,
+.star_rating_3 input,
+.star_rating_4 input,
+.star_rating_5 input,
+.star_rating_6 input,
+.star_rating_7 input,
+.star_rating_8 input,
+.star_rating_9 input,
+.star_rating_10 input{
+	display: none;
+}
+
+.star_rating_0 label,
+.star_rating_1 label,
+.star_rating_2 label,
+.star_rating_3 label,
+.star_rating_4 label,
+.star_rating_5 label,
+.star_rating_6 label,
+.star_rating_7 label,
+.star_rating_8 label,
+.star_rating_9 label,
+.star_rating_10 label{
+	width: 40px;
+	cursor: pointer;
+}
+
+.star_rating_0 label::before,
+.star_rating_1 label::before,
+.star_rating_2 label::before,
+.star_rating_3 label::before,
+.star_rating_4 label::before,
+.star_rating_5 label::before,
+.star_rating_6 label::before,
+.star_rating_7 label::before,
+.star_rating_8 label::before,
+.star_rating_9 label::before,
+.star_rating_10 label::before{ /*add some content before the element: in this case we've added grey stars*/
+	display: flex;
+	content: '\f005'; /*code of the star character*/
+	font-family: FontAwesome; 
+	transform: translateY(50%); /*move down on the y-axis*/
+	font-size: 30px;
+	color: lightgray;
+}
+
+.star_rating_0 label::after,
+.star_rating_1 label::after,
+.star_rating_2 label::after,
+.star_rating_3 label::after,
+.star_rating_4 label::after,
+.star_rating_5 label::after,
+.star_rating_6 label::after,
+.star_rating_7 label::after,
+.star_rating_8 label::after,
+.star_rating_9 label::after,
+.star_rating_10 label::after{ /*add some content after the element: in this case we've added yellow stars*/
+	display: flex;
+	transform: translateY(-50%); /*move up on the y-axis*/
+	content: '\f005';
+	font-family: FontAwesome;
+	font-size: 30px;
+	color: yellow;
+	opacity: 0;
+}
+
+/*
+if the cursor is on the grey star ---> the star turns on yellow
+if we select a star ---> the star selected and the previous ones turn on yellow
+*/
+
+.star_rating_0 label:hover::after, 
+.star_rating_0 input:hover ~ label::after,
+.star_rating_0 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_1 label:hover::after, 
+.star_rating_1 input:hover ~ label::after,
+.star_rating_1 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_2 label:hover::after, 
+.star_rating_2 input:hover ~ label::after,
+.star_rating_2 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_3 label:hover::after, 
+.star_rating_3 input:hover ~ label::after,
+.star_rating_3 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_4 label:hover::after, 
+.star_rating_4 input:hover ~ label::after,
+.star_rating_4 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_5 label:hover::after, 
+.star_rating_5 input:hover ~ label::after,
+.star_rating_5 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_6 label:hover::after, 
+.star_rating_6 input:hover ~ label::after,
+.star_rating_6 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_7 label:hover::after, 
+.star_rating_7 input:hover ~ label::after,
+.star_rating_7 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_8 label:hover::after, 
+.star_rating_8 input:hover ~ label::after,
+.star_rating_8 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_9 label:hover::after, 
+.star_rating_9 input:hover ~ label::after,
+.star_rating_9 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.star_rating_10 label:hover::after, 
+.star_rating_10 input:hover ~ label::after,
+.star_rating_10 input:checked ~ label::after
+{
+	opacity: 1;
+}
+
+.rating_number_edit{	
+	margin-right: 1em;
+	align-self: center;
+	transform: rotateY(180deg);
+}
